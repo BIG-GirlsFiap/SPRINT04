@@ -1,0 +1,14 @@
+@use 'mixins'; 
+
+@mixin pd-default-config($margin-default, $pd-default) {
+    margin: $margin-default;
+    padding: $pd-default;
+}
+
+@mixin div-size($w, $h){
+    width: $w;
+    height: $h;
+}
+@mixin div-style($bg-color : rgba(0, 0, 0, 0.5)) {
+    background-color: $bg-color;
+}
