@@ -1,20 +1,206 @@
-@use 'mixins';
-@use 'variable';
-@import '~bootstrap/scss/bootstrap';
-*{
-    @include mixins.pd-default-config(0, 0);
-    font: variable.$primary-font;
-    
+@use "mixins";
+$color-black: black;
+$color-white: white;
+//@use "variaveis";
+// @import "~bootstrap/scss/bootstrap";
+* {
+  @include mixins.pd-mg-default(0, 0);
+  //font-family: $primary-font;
 }
-body{
-    @include mixins.div-style();
+body {
+  background: #00000027;
 }
 header {
-    @include mixins.div-size(100%, 100px);
-    main{
-        @include mixins.div-size(100%, 100px);
+  background: rgb(85, 171, 222);
+  border-bottom: 1px solid darkgray;
+  background: linear-gradient(
+    158deg,
+    rgba(85, 171, 222, 1) 36%,
+    rgba(219, 245, 241, 1) 100%
+  );
+  height: fit-content;
+  .head {
+    @include mixins.flex-config(row, space-between, center);
+    @include mixins.sizings();
+  }
+  .logoICR {
+    width: 75px;
+  }
+}
+.HomeInfo {
+  @include mixins.sizings();
+
+  .content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 2fr;
+    .title {
+      h1 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
     }
-    img{
-        @include mixins.div-size(100%, 100px);
-    };
+  }
+  .apoio-psicologico {
+    margin: 0 auto;
+    text-align: justify;
+    height: fit-content;
+    gap: 1rem;
+    .card {
+      gap: 1rem;
+      @include mixins.py(1rem, 1rem);
+    }
+    .btns {
+      @include mixins.sizings();
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+    a {
+      width: 48%;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding: 3px;
+    }
+  }
+  .accordion {
+    text-align: justify;
+    iframe {
+      @include mixins.sizings();
+      display: flex;
+      @include mixins.py(1rem, 1rem);
+    }
+  }
+}
+.PortalContent {
+  @include mixins.py(1rem, 1rem);
+  @include mixins.sizings();
+  .mainInfo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    .content {
+      #portal-paciente {
+        position: relative;
+        background-color: aquamarine;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        border-radius: 10px;
+        #portal,
+        ul {
+          width: 100%;
+          position: relative;
+          align-items: center;
+          justify-content: center;
+          h1 {
+            font-size: 1.8rem;
+          }
+          form {
+            margin: 0 auto;
+            position: relative;
+
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            border-radius: 10px;
+            .form-box {
+              align-items: center;
+              width: 100%;
+              margin: 0 auto;
+              padding: 12px;
+              border-radius: 10px;
+              justify-content: center;
+              @include mixins.py(0.3rem, 0.3rem);
+              input {
+                width: 250px;
+                border-radius: 60px;
+                text-align: center;
+                border: 1px solid $color-black;
+                margin-bottom: 1rem;
+              }
+              button {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0.5rem;
+                align-items: center;
+                justify-content: center;
+                display: inline;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+    #avaliation {
+      background-color: #eea4a4;
+      border-radius: 10px;
+      padding: 2rem;
+      #avaliation-box {
+        button {
+          width: 20%;
+          border: none;
+          gap: 1rem;
+          background: transparent;
+          margin: 0.5rem;
+        }
+        button img {
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: rgb(85, 171, 222);
+  background: linear-gradient(
+    158deg,
+    rgba(85, 171, 222, 1) 36%,
+    rgba(219, 245, 241, 1) 100%
+  );
+  position: relative;
+  height: 250px;
+  margin-top: 1rem;
+  padding: 0;
+  .foot {
+    @include mixins.sizings();
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    @include mixins.py(0.3rem, 0.3rem);
+    align-items: center;
+    justify-content: center;
+    color: $color-black;
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      @include mixins.sizings(100px, 40px);
+      margin-right: 1.5rem;
+    }
+    a {
+      justify-content: space-around;
+      width: 100%;
+      margin: 0 auto;
+      margin-right: 1rem;
+      text-decoration: none;
+      color: $color-black;
+      gap: 1rem;
+    }
+    svg {
+      @include mixins.div-size(30px, 40px);
+      margin-right: 1rem;
+      gap: 1rem;
+    }
+  }
 }

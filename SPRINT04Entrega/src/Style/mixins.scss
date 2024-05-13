@@ -1,14 +1,40 @@
-@use 'mixins'; 
-
-@mixin pd-default-config($margin-default, $pd-default) {
-    margin: $margin-default;
+@mixin pd-mg-default ($pd-default, $mg-default){
     padding: $pd-default;
+    margin: $mg-default;
 }
 
-@mixin div-size($w, $h){
+@mixin div-size($w,$h){
     width: $w;
     height: $h;
 }
-@mixin div-style($bg-color : rgba(0, 0, 0, 0.5)) {
+@mixin div-style($bg-color, $color){
     background-color: $bg-color;
+    color: $color;
+}
+@mixin px($pl, $pr){
+    padding-left: $pl;
+    padding-right: $pr;
+}
+@mixin py($pt, $pb){
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+@mixin flex-config($direction, $justify, $a-itens){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $a-itens;
+}
+
+@mixin relative-center(){
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+@mixin sizings($w:80%, $m: 0 auto){
+    width: $w;
+    margin: $m;
 }

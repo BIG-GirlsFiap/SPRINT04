@@ -1,1 +1,212 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.1529411765);
+}
+
+header {
+  background: rgb(85, 171, 222);
+  border-bottom: 1px solid darkgray;
+  background: linear-gradient(158deg, rgb(85, 171, 222) 36%, rgb(219, 245, 241) 100%);
+  height: -moz-fit-content;
+  height: fit-content;
+}
+header .head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+header .logoICR {
+  width: 75px;
+}
+
+.HomeInfo {
+  width: 80%;
+  margin: 0 auto;
+}
+.HomeInfo .content {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr;
+}
+.HomeInfo .content .title h1 {
+  font-size: 2rem;
+}
+.HomeInfo .content .title h3 {
+  font-size: 1rem;
+}
+.HomeInfo .apoio-psicologico {
+  margin: 0 auto;
+  text-align: justify;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 1rem;
+}
+.HomeInfo .apoio-psicologico .card {
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.HomeInfo .apoio-psicologico .btns {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.HomeInfo .apoio-psicologico a {
+  width: 48%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 3px;
+}
+.HomeInfo .accordion {
+  text-align: justify;
+}
+.HomeInfo .accordion iframe {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.PortalContent {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.PortalContent .mainInfo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+.PortalContent .mainInfo .content #portal-paciente {
+  position: relative;
+  background-color: aquamarine;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.PortalContent .mainInfo .content #portal-paciente #portal,
+.PortalContent .mainInfo .content #portal-paciente ul {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.PortalContent .mainInfo .content #portal-paciente #portal h1,
+.PortalContent .mainInfo .content #portal-paciente ul h1 {
+  font-size: 1.8rem;
+}
+.PortalContent .mainInfo .content #portal-paciente #portal form,
+.PortalContent .mainInfo .content #portal-paciente ul form {
+  margin: 0 auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 10px;
+}
+.PortalContent .mainInfo .content #portal-paciente #portal form .form-box,
+.PortalContent .mainInfo .content #portal-paciente ul form .form-box {
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 10px;
+  justify-content: center;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.PortalContent .mainInfo .content #portal-paciente #portal form .form-box input,
+.PortalContent .mainInfo .content #portal-paciente ul form .form-box input {
+  width: 250px;
+  border-radius: 60px;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}
+.PortalContent .mainInfo .content #portal-paciente #portal form .form-box button,
+.PortalContent .mainInfo .content #portal-paciente ul form .form-box button {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  display: inline;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.PortalContent .mainInfo #avaliation {
+  background-color: #eea4a4;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.PortalContent .mainInfo #avaliation #avaliation-box button {
+  width: 20%;
+  border: none;
+  gap: 1rem;
+  background: transparent;
+  margin: 0.5rem;
+}
+.PortalContent .mainInfo #avaliation #avaliation-box button img {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+footer {
+  background: rgb(85, 171, 222);
+  background: linear-gradient(158deg, rgb(85, 171, 222) 36%, rgb(219, 245, 241) 100%);
+  position: relative;
+  height: 250px;
+  margin-top: 1rem;
+  padding: 0;
+}
+footer .foot {
+  width: 80%;
+  margin: 0 auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+footer .foot section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .foot img {
+  width: 100px;
+  margin: 40px;
+  margin-right: 1.5rem;
+}
+footer .foot a {
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: black;
+  gap: 1rem;
+}
+footer .foot svg {
+  width: 30px;
+  height: 40px;
+  margin-right: 1rem;
+  gap: 1rem;
+}/*# sourceMappingURL=style.css.map */

@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, RouterProvider,Link} from 'react-router-dom'
 import App from './App.jsx'
 import Contato from './pages/Contato'
-import Portal from './pages/PortaPaciente.jsx'
+import Portal from './pages/PortalPaciente.jsx'
 import PageNotFound from './pages/PageNotFound'
 import Home from './pages/Home'
 
 //import './index.css'
-import './Style/style.css'
+import './style/style.css'
 
 
 

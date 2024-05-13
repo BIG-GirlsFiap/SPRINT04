@@ -5,12 +5,14 @@ import VideoUltrassom from '../videos/Ultrassom.mp4'
 
 function HomeContent() {
   return (
-    <main className="mainInfo">
-      <div className='content'>
-        <div className='infos-main'>
+    <main className="HomeInfo">
+      <section className='content pt-5'>
+        <section className='infos-main '>
           <div className="title">
-            <h1>Explicação de Procedimentos</h1> </div>
-          <div className="accordion" id="accordionExample">
+            <h1 className="">Procedimentos</h1>
+            <h3>Explicação lúdica-educativa</h3>
+          </div>
+          <div className="accordion fit-content small" id="accordionExample">
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingOne">
                 <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -18,9 +20,9 @@ function HomeContent() {
                 </button>
               </h2>
               <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                  <video controls src={VideoExameDeSangue}></video>
-                  <p>Imagine que seu corpo é uma cidade e as células são os moradores. O exame de sangue é como
+                <div className="accordion-body embed-responsive embed-responsive-1by1">
+                  <iframe controls src={VideoExameDeSangue} className='embed-responsive-item mx-auto my-2 w-200px align-content-center '></iframe>
+                  <p className=''>Imagine que seu corpo é uma cidade e as células são os moradores. O exame de sangue é como
                     um
                     detetive que coleta informações da "rodovia" do sangue, onde as células viajam. Ele analisa
                     essas
@@ -41,9 +43,9 @@ function HomeContent() {
                 </button>
               </h2>
               <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                  <video controls src={VideoTomografia}></video>
-                  <p>
+                <div className="accordion-body accordion-body embed-responsive embed-responsive-1by1">
+                  <iframe controls src={VideoTomografia} className='embed-responsive-item'></iframe>
+                  <p className='text-justify'>
                     Vamos imaginar que seu corpo é uma cidade incrível e a tomografia é como um mapa detalhado
                     dessa
                     cidade. Os médicos querem saber exatamente como são os prédios e ruas por dentro, então usam
@@ -70,9 +72,9 @@ function HomeContent() {
                 </button>
               </h2>
               <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                  <video controls src={VideoUltrassom}></video>
-                  <p>
+                <div className="accordion-body embed-responsive embed-responsive-1by1">
+                  <iframe controls src={VideoUltrassom} className='embed-responsive-item'></iframe>
+                  <p className='text-justify'>
                     O ultrassom é como uma máquina de tirar fotos mágica que os médicos usam para ver o que está
                     acontecendo dentro do nosso corpo. Eles espalham um gelzinho na pele, que é um pouco frio, e
                     usam
@@ -88,9 +90,9 @@ function HomeContent() {
               </div>
             </div>
           </div>
-        </div>
-        <div className='apoio-psicologico'>
-          <div className="card" >
+        </section>
+        <section className='apoio-psicologico row h-fit-content'>
+          <div className="card   " >
 
             <div className="card-body">
               <h5 className="card-title">Apoio Psicológico</h5>
@@ -100,13 +102,15 @@ function HomeContent() {
                 Muitas das vezes é preciso ter alterações na rotina, alguns pacientes e acompanhantes precisam passar muito tempo dentro de hospitais,
                 que pode afetar no trabalho e nos estudos.
               </p>
-              <a href="#" className="btn btn-primary">Sessão para Pacientes</a>
-              <a href="#" className="btn btn-primary ">Sessão para Responsáveis</a>
-
+              <div className='btns'>
+                <a href="#" className="btn btn-primary m-0">Sessão para Pacientes</a>
+                <a href="#"></a>
+                <a href="#" className="btn btn-primary ">Sessão para Responsáveis</a>
+              </div>
             </div>
 
           </div>
-          <div className="card" >
+          <div className="card col" >
 
             <div className="card-body">
               <h5 className="card-title">Campanhas</h5>
@@ -119,15 +123,16 @@ function HomeContent() {
                 Explore nossas campanhas, contribua, compartilhe e inspire-se. Juntos,
                 podemos transformar vidas e criar um impacto duradouro. Faça a diferença agora, junte-se à nossa comunidade de mudança positiva!
               </p>
-              <a href="#" className="btn btn-primary"> Saiba Mais </a>
-
+              <div className='btns'>
+                <a href="#" className="btn btn-primary ml-3"> Saiba Mais </a>
+              </div>
             </div>
 
           </div>
-        </div>
+        </section>
 
 
-      </div>
+      </section>
     </main>
   )
 
