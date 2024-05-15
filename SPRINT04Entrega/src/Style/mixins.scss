@@ -19,6 +19,14 @@
     padding-top: $pt;
     padding-bottom: $pb;
 }
+@mixin mx($ml, $mr){
+    margin-left: $ml;
+    margin-right: $mr;
+}
+@mixin my($mt, $mB){
+    margin-top: $mt;
+    margin-bottom: $mB;
+}
 @mixin flex-config($direction, $justify, $a-itens){
     display: flex;
     flex-direction: $direction;

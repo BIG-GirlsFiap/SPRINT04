@@ -1,6 +1,8 @@
 @use "mixins";
 $color-black: black;
 $color-white: white;
+$primary-color: #0d6efd;
+$color-blue: rgb(85, 171, 222);
 //@use "variaveis";
 // @import "~bootstrap/scss/bootstrap";
 * {
@@ -14,14 +16,28 @@ header {
   background: rgb(85, 171, 222);
   border-bottom: 1px solid darkgray;
   background: linear-gradient(
-    158deg,
-    rgba(85, 171, 222, 1) 36%,
-    rgba(219, 245, 241, 1) 100%
+    200deg,
+    rgba(85, 171, 222, 1) 15%,
+    rgb(149, 223, 212) 100%
   );
   height: fit-content;
   .head {
     @include mixins.flex-config(row, space-between, center);
     @include mixins.sizings();
+
+    .Logo {
+      width: 20%;
+      @include mixins.flex-config(row, center, center);
+      font-weight: bolder;
+      font-size: 0.8rem;
+
+      p {
+        text-transform: uppercase;
+        align-items: center;
+        align-content: center;
+        margin-top: 0.4rem;
+      }
+    }
   }
   .logoICR {
     width: 75px;
@@ -83,19 +99,23 @@ header {
     .content {
       #portal-paciente {
         position: relative;
-        background-color: aquamarine;
+        background: rgb(211, 112, 223);
+        background: linear-gradient(
+          130deg,
+          rgba(212, 112, 223, 0.815) 10%,
+          rgba(245, 201, 124, 0.89) 100%
+        );
         align-items: center;
         justify-content: center;
         padding: 2rem;
         border-radius: 10px;
-        #portal,
-        ul {
+        #portal {
           width: 100%;
           position: relative;
           align-items: center;
           justify-content: center;
           h1 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
           }
           form {
             margin: 0 auto;
@@ -137,7 +157,12 @@ header {
       }
     }
     #avaliation {
-      background-color: #eea4a4;
+      background: rgb(211, 112, 223);
+      background: linear-gradient(
+        330deg,
+        rgba(212, 112, 223, 0.815) 10%,
+        rgba(245, 201, 124, 0.89) 100%
+      );
       border-radius: 10px;
       padding: 2rem;
       #avaliation-box {
@@ -158,23 +183,111 @@ header {
     }
   }
 }
+.Contato {
+  @include mixins.sizings();
+  height: 20%;
+  @include mixins.py(1rem, 1rem);
+  .humaniza-title {
+    object-fit: cover;
+    @include mixins.flex-config(row, center, center);
+
+    height: 20%;
+    img {
+      width: 25%;
+    }
+    h1 {
+      font-weight: 400;
+    }
+  }
+  .contactArea {
+    @include mixins.py(0.5rem, 0.5rem);
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    #contact {
+      width: 95%;
+      border-radius: 10px;
+      height: fit-content;
+      padding-bottom: 1rem;
+      .form-contact {
+        @include mixins.sizings(100%, 0 auto);
+        
+        padding: 10%;
+        border-radius: 10px;
+        background-color: rgba(85, 172, 222, 0.733);
+        h2 {
+          font-weight: 400;
+          padding-bottom: 1rem;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          input,
+          textarea,
+          button {
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            @include mixins.py(0.5rem, 0.5rem);
+          }
+          button {
+            background-color: $primary-color;
+          }
+        }
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+        @include mixins.my(0.5rem, 0.5rem);
+        height: 20%;
+        border-radius: 10px;
+      }
+      
+    }
+    .card {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      width: 95%;
+      .card-body {
+        @include mixins.py(0.5rem, 0.5rem);
+        iframe {
+          width: 100%;
+        }
+        a {
+          text-decoration: none;
+          color: $color-black;
+          
+        }
+        iframe{
+          width: 100%;
+          height: 100%;
+          @include mixins.my(0.5rem, 0.5rem);
+          height: 20%;
+          border-radius: 10px;
+        }
+      }     
+    }
+    
+  }
+}
 
 footer {
   background: rgb(85, 171, 222);
   background: linear-gradient(
-    158deg,
-    rgba(85, 171, 222, 1) 36%,
-    rgba(219, 245, 241, 1) 100%
+    20deg,
+    rgba(85, 171, 222, 1) 15%,
+    rgb(149, 223, 212) 100%
   );
-  position: relative;
-  height: 250px;
+  position: relative;  
+  height: fit-content;
   margin-top: 1rem;
   padding: 0;
   .foot {
     @include mixins.sizings();
+    height: 100px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 70% 30%;
     @include mixins.py(0.3rem, 0.3rem);
     align-items: center;
     justify-content: center;

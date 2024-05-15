@@ -18,7 +18,7 @@ function Footer() {
             </a>
           </div>
         </section>
-        <section className="h-25">
+        <section className="">
           <p>COPYRIGHT © 2024 </p>
         </section>
       </main>
