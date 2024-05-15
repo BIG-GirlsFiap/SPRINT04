@@ -90,7 +90,7 @@ header {
   }
 }
 .PortalContent {
-  @include mixins.py(1rem, 1rem);
+  @include mixins.py(1.5rem, 1rem);
   @include mixins.sizings();
   .mainInfo {
     display: grid;
