@@ -166,6 +166,11 @@ header {
       border-radius: 10px;
       padding: 2rem;
       #avaliation-box {
+        @include mixins.py(1rem, 1rem);
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
         button {
           width: 20%;
           border: none;
@@ -178,6 +183,10 @@ header {
           background-color: transparent;
           border: none;
           border-radius: 50%;
+        }
+        #btn-avaliation {
+          position: relative;
+          align-items: center;
         }
       }
     }
@@ -202,7 +211,7 @@ header {
   .contactArea {
     @include mixins.py(0.5rem, 0.5rem);
     display: grid;
-    grid-template-columns: 30% 40% 30%;
+    grid-template-columns: 35% 30% 35%;
     #contact {
       width: 95%;
       border-radius: 10px;
@@ -210,7 +219,7 @@ header {
       padding-bottom: 1rem;
       .form-contact {
         @include mixins.sizings(100%, 0 auto);
-        
+
         padding: 10%;
         border-radius: 10px;
         background-color: rgba(85, 172, 222, 0.733);
@@ -235,14 +244,13 @@ header {
           }
         }
       }
-      iframe{
+      iframe {
         width: 100%;
         height: 100%;
         @include mixins.my(0.5rem, 0.5rem);
         height: 20%;
         border-radius: 10px;
       }
-      
     }
     .card {
       margin-bottom: 1rem;
@@ -256,18 +264,16 @@ header {
         a {
           text-decoration: none;
           color: $color-black;
-          
         }
-        iframe{
+        iframe {
           width: 100%;
           height: 100%;
           @include mixins.my(0.5rem, 0.5rem);
           height: 20%;
           border-radius: 10px;
         }
-      }     
+      }
     }
-    
   }
 }
 
@@ -278,7 +284,7 @@ footer {
     rgba(85, 171, 222, 1) 15%,
     rgb(149, 223, 212) 100%
   );
-  position: relative;  
+  position: relative;
   height: fit-content;
   margin-top: 1rem;
   padding: 0;

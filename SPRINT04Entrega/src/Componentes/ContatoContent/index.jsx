@@ -15,20 +15,7 @@ function ContactForm() {
       </section>
       <section className="contactArea">
 
-        <div id="contact">
-
-          <div className="form-contact">
-            <h2>Entre em Contato</h2>
-            <form>
-              <input type="text" placeholder="Nome" />
-              <input type="email" placeholder="Email" />
-              <input type="number" name="telefone" placeholder="Telefone" id="" />
-              <textarea placeholder="Mensagem" />
-              <button type="submit">Enviar</button>
-            </form>
-          </div>
-          {/* <iframe src="https://api.wo-cloud.com/content/widget/?geoObjectKey=3705599&language=pt&region=BR&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius" name="CW2" scrolling="no" frameborder="0" ></iframe> */}
-        </div>
+        
         <div>
           <div className="card">
             <div class="card-body">
@@ -48,6 +35,20 @@ function ContactForm() {
           <div>
             
           </div>
+        </div>
+        <div id="contact">
+
+          <div className="form-contact">
+            <h2>Entre em Contato</h2>
+            <form>
+              <input type="text" placeholder="Nome" />
+              <input type="email" placeholder="Email" />
+              <input type="number" name="telefone" placeholder="Telefone" id="" />
+              <textarea placeholder="Mensagem" />
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+          {/* <iframe src="https://api.wo-cloud.com/content/widget/?geoObjectKey=3705599&language=pt&region=BR&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius" name="CW2" scrolling="no" frameborder="0" ></iframe> */}
         </div>
         <div className="telefones">
         <div className="card">

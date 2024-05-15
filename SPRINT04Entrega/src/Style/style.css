@@ -162,6 +162,14 @@ header .logoICR {
   border-radius: 10px;
   padding: 2rem;
 }
+.PortalContent .mainInfo #avaliation #avaliation-box {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
 .PortalContent .mainInfo #avaliation #avaliation-box button {
   width: 20%;
   border: none;
@@ -174,6 +182,10 @@ header .logoICR {
   background-color: transparent;
   border: none;
   border-radius: 50%;
+}
+.PortalContent .mainInfo #avaliation #avaliation-box #btn-avaliation {
+  position: relative;
+  align-items: center;
 }
 
 .Contato {
@@ -202,7 +214,7 @@ header .logoICR {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: grid;
-  grid-template-columns: 30% 40% 30%;
+  grid-template-columns: 35% 30% 35%;
 }
 .Contato .contactArea #contact {
   width: 95%;

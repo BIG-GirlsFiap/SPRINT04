@@ -77,13 +77,19 @@ function Portal() {
                                 <div id="avaliation-box">
                                     <p>Como o paciente se sentiu durante na situação?</p>
                                     <div id="btn-avaliation">
-                                        <button id="btn-avaliation"><img src={Alegria}
-                                            alt="Botão Alegria" /></button>
-                                        <button id="btn-avaliation"><img src={Medo} alt="Botão Medo" /></button>
-                                        <button id="btn-avaliation"><img src={Raiva}
-                                            alt="Botão Raiva" /></button>
-                                        <button id="btn-avaliation"><img src={Tristeza}
-                                            alt="Botão Tristeza" /></button>
+                                        <button id="btn-avaliation">
+                                            <img src={Alegria} alt="Botão Alegria" />
+                                        </button>
+                                        <button id="btn-avaliation">
+                                            <img src={Medo} alt="Botão Medo" />
+                                            </button>
+                                        <button id="btn-avaliation">
+                                            <img src={Raiva} alt="Botão Raiva" />
+                                            </button>
+                                        <button id="btn-avaliation">
+                                            <img src={Tristeza}
+                                            alt="Botão Tristeza" />
+                                            </button>
                                     </div>
                                 </div>
                                 <div id="agradecimento" class="agradecimento d-none">
