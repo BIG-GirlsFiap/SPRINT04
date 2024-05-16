@@ -1,6 +1,7 @@
-import VideoExameDeSangue from '../videos/ExameDeSangue.mp4'
-import VideoTomografia from '../videos/Tomografia.mp4'
-import VideoUltrassom from '../videos/Ultrassom.mp4'
+import VideoExameDeSangue from '../videos/ExameDeSangue.mp4';
+import VideoTomografia from '../videos/Tomografia.mp4';
+import VideoUltrassom from '../videos/Ultrassom.mp4';
+import data from '../../../noticias.json';
 
 
 function HomeContent() {
@@ -128,6 +129,21 @@ function HomeContent() {
               </div>
             </div>
 
+          </div>
+        </section>
+        <section>
+          <div>
+            {data.map((noticias, index) => (
+              <div key={index}> 
+                <h1>{noticias.title}</h1>
+                {/* <img src="{noticia.image}" alt="" /> */}
+                <div>
+                  {data.text.map((text) => (
+                    <p key={text}>{text}</p>
+                  ))}
+                </div>
+              </div> 
+            ))}
           </div>
         </section>
 

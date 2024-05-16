@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Nova Vacina Infantil Contra Vírus Sincicial Respiratório",
+    "descrition": "Cientistas desenvolvem uma vacina eficaz contra o vírus sincicial respiratório, uma das principais causas de doenças respiratórias em crianças.",
+    "image": "https://exemplo.com/foto_vacina_vsr.jpg",
+    "text": "Uma nova vacina para proteger crianças contra o vírus sincicial respiratório (VSR) foi desenvolvida e mostrou resultados promissores em ensaios clínicos, oferecendo uma nova ferramenta na luta contra doenças respiratórias infantis."
+  },
+  {
+    "title": "Importância da Nutrição nos Primeiros Anos de Vida",
+    "descrition": "Estudo destaca como a nutrição adequada nos primeiros anos é crucial para o desenvolvimento físico e cognitivo das crianças.",
+    "image": "https://exemplo.com/foto_nutricao_infantil.jpg",
+    "text": "Pesquisadores enfatizam a importância de uma dieta equilibrada e rica em nutrientes nos primeiros anos de vida, sublinhando seu impacto no desenvolvimento cerebral e no crescimento saudável das crianças."
+  },
+  {
+    "title": "Benefícios da Atividade Física para Crianças",
+    "descrition": "Especialistas discutem como a atividade física regular pode melhorar a saúde e o bem-estar das crianças.",
+    "image": "https://exemplo.com/foto_atividade_fisica_criancas.jpg",
+    "text": "A prática regular de exercícios físicos é essencial para o desenvolvimento saudável das crianças, contribuindo para o fortalecimento do sistema imunológico, melhora do humor e prevenção de doenças crônicas."
+  },
+  {
+    "title": "Prevenção e Tratamento da Obesidade Infantil",
+    "descrition": "Novas diretrizes para a prevenção e tratamento da obesidade em crianças são lançadas por organizações de saúde.",
+    "image": "https://exemplo.com/foto_obesidade_infantil.jpg",
+    "text": "Organizações de saúde lançaram novas diretrizes para combater a obesidade infantil, destacando a importância de intervenções precoces, alimentação saudável e atividades físicas regulares para prevenir problemas de saúde a longo prazo."
+  },
+  {
+    "title": "Impacto da Tecnologia na Saúde Mental Infantil",
+    "descrition": "Estudos exploram como o uso excessivo de dispositivos eletrônicos pode afetar a saúde mental das crianças.",
+    "image": "https://exemplo.com/foto_tecnologia_saude_mental_criancas.jpg",
+    "text": "Pesquisas recentes indicam que o uso excessivo de dispositivos eletrônicos pode estar associado a problemas de saúde mental em crianças, incluindo ansiedade e distúrbios do sono, sublinhando a necessidade de monitoramento e limites no uso da tecnologia."
+  }
+]
