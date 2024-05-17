@@ -116,7 +116,8 @@ function HomeContent() {
             <div className="card-body">
               <h5 className="card-title">Campanhas</h5>
               <p className="card-text">
-                Campanhas são oportunidades de transformar empatia em ação tangível. Seja apoiando iniciativas locais, ajudando indivíduos em
+                Campanhas são oportunidades de transformar empatia em ação
+                 tangível. Seja apoiando iniciativas locais, ajudando indivíduos em
                 necessidade ou impulsionando projetos comunitários, cada contribuição é um passo em direção a um futuro mais solidário e compassivo.
                 Não espere para ser parte da mudança que deseja ver no mundo.
               </p>
