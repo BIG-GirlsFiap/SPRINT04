@@ -48,7 +48,7 @@ header .logoICR {
 .HomeInfo .content {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .HomeInfo .content .title h1 {
   font-size: 2rem;
@@ -89,6 +89,45 @@ header .logoICR {
   display: flex;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.HomeInfo .noticias {
+  width: 100%;
+}
+.HomeInfo .noticias .noticias-main .noticias-box {
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.HomeInfo .noticias .noticias-main .noticias-box h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+}
+.HomeInfo .noticias .noticias-main .noticias-box .descrition {
+  font-size: 1rem;
+  text-align: justify;
+}
+.HomeInfo .noticias .noticias-main .noticias-box .noticia-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.HomeInfo .noticias .noticias-main .noticias-box .noticia-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.HomeInfo .noticias .noticias-main .noticias-box .texto-noticia {
+  font-size: 1rem;
+  text-align: justify;
 }
 
 .PortalContent {

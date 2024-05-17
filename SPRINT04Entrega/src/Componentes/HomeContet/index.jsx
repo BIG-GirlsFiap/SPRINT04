@@ -131,25 +131,41 @@ function HomeContent() {
 
           </div>
         </section>
-        <section>
-          <div>
-            {data.map((noticias, index) => (
-              <div key={index}> 
-                <h1>{noticias.title}</h1>
-                {/* <img src="{noticia.image}" alt="" /> */}
-                <div>
-                  {data.text.map((text) => (
-                    <p key={text}>{text}</p>
-                  ))}
+        <section className='noticias'>
+
+          {/* <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              {data.noticias.map((noticia, index) => (
+                <div class={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                  <img src={noticia.image} alt="" />
+                  <div className='carousel-caption d-none d-md-block'>
+                    <h1>{noticia.title}</h1>
+                    <p className='descrition text-muted'>{noticia.descrition}</p>
+                  </div>
                 </div>
-              </div> 
+
+              ))}
+            </div>
+          </div> */}
+
+
+          <div className='noticias-main'>
+            {data.noticias.map((noticia, index) => (
+              <div key={index} className='noticias-box'>
+                <h1>{noticia.title}</h1>
+                <p className='descrition text-muted'>{noticia.descrition}</p>
+                <div className='noticia-image'>
+                  <img src={noticia.image} alt="" />
+                </div>
+                <div>
+                  <p className='texto-noticia'>{noticia.text}</p>
+                </div>
+              </div>
             ))}
           </div>
         </section>
-
-
       </section>
-    </main>
+    </main >
   )
 
 }

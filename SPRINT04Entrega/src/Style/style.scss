@@ -49,7 +49,7 @@ header {
   .content {
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     .title {
       h1 {
         font-size: 2rem;
@@ -86,6 +86,46 @@ header {
       @include mixins.sizings();
       display: flex;
       @include mixins.py(1rem, 1rem);
+    }
+  }
+  .noticias {
+    width: 100%;
+    .noticias-main {
+      .noticias-box {
+        background-color: $color-white;
+        @include mixins.py(1rem, 1rem);
+        @include mixins.px(1rem, 1rem);
+        @include mixins.my(0, 1rem);
+        border-radius: 10px;
+
+        h1 {
+          font-size: 1.5rem;
+          text-align: center;
+          font-weight: bold;
+          text-decoration: wavy;
+        }
+        .descrition {
+          font-size: 1rem;
+          text-align: justify;
+        }
+
+        .noticia-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include mixins.my(0, 1rem);
+
+          img {
+            width: 100%;
+            border-radius: 10px;
+          }
+        }
+
+        .texto-noticia {
+          font-size: 1rem;
+          text-align: justify;
+        }
+      }
     }
   }
 }
