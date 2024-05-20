@@ -1,8 +1,8 @@
-import ContatoCotent from '../Componentes/ContatoContent/index.jsx'
+import ContatoContent from '../Componentes/ContatoContent/index.jsx'
 function Contato (){
     return(
         <>
-        <ContatoCotent/>
+        <ContatoContent/>
         </>
     )
 }

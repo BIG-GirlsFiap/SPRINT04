@@ -4,12 +4,11 @@
 }
 
 body {
-  background: rgba(0, 0, 0, 0.1529411765);
+  background-color: white;
 }
 
 header {
   background: rgb(85, 171, 222);
-  border-bottom: 1px solid darkgray;
   background: linear-gradient(200deg, rgb(85, 171, 222) 15%, rgb(149, 223, 212) 100%);
   height: -moz-fit-content;
   height: fit-content;
@@ -40,60 +39,107 @@ header .head .Logo p {
 header .logoICR {
   width: 75px;
 }
+header nav {
+  background-color: transparent;
+  border: none;
+  list-style: none;
+}
+header nav .menu {
+  display: flex;
+  width: 100%;
+  border: none;
+  text-decoration: none;
+}
+header nav .menu button {
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+}
 
 .HomeInfo {
   width: 80%;
   margin: 0 auto;
 }
-.HomeInfo .content {
+
+.content {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.HomeInfo .content .title h1 {
+.content .title h1 {
   font-size: 2rem;
 }
-.HomeInfo .content .title h3 {
+.content .title h3 {
   font-size: 1rem;
 }
-.HomeInfo .apoio-psicologico {
+
+.apoio-psicologico {
   margin: 0 auto;
   text-align: justify;
   height: -moz-fit-content;
   height: fit-content;
+  min-width: 300px;
+  padding-top: 0;
+  padding-bottom: 1rem;
   gap: 1rem;
 }
-.HomeInfo .apoio-psicologico .card {
+.apoio-psicologico .card {
   gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  background-color: rgba(24, 186, 226, 0.274);
+  border: none;
+  gap: 1rem;
 }
-.HomeInfo .apoio-psicologico .btns {
+.apoio-psicologico .btns {
+  display: flex;
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-tracks: center;
+  gap: 1rem;
 }
-.HomeInfo .apoio-psicologico a {
-  width: 48%;
-  margin: 0 auto;
-  justify-content: space-between;
-  padding: 3px;
+.apoio-psicologico .btns button {
+  width: 45%;
+  margin: 0.5rem;
+  padding: 4px;
+  gap: 1rem;
+  background-color: rgb(85, 171, 222);
+  border: none;
+  border-radius: 5px;
 }
-.HomeInfo .accordion {
+
+.Accordion {
   text-align: justify;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.HomeInfo .accordion iframe {
+.Accordion iframe {
+  width: 100%;
+  height: 100%;
   width: 80%;
   margin: 0 auto;
   display: flex;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.HomeInfo .noticias {
+
+.noticias {
   width: 100%;
 }
-.HomeInfo .noticias .noticias-main .noticias-box {
+.noticias .noticias-main {
+  border: 0.5px solid rgba(128, 128, 128, 0.356);
+  border-radius: 10px;
+}
+.noticias .noticias-main .noticias-box {
   background-color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -103,29 +149,29 @@ header .logoICR {
   margin-bottom: 1rem;
   border-radius: 10px;
 }
-.HomeInfo .noticias .noticias-main .noticias-box h1 {
+.noticias .noticias-main .noticias-box h1 {
   font-size: 1.5rem;
   text-align: center;
   font-weight: bold;
   -webkit-text-decoration: wavy;
           text-decoration: wavy;
 }
-.HomeInfo .noticias .noticias-main .noticias-box .descrition {
+.noticias .noticias-main .noticias-box .descrition {
   font-size: 1rem;
   text-align: justify;
 }
-.HomeInfo .noticias .noticias-main .noticias-box .noticia-image {
+.noticias .noticias-main .noticias-box .noticia-image {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 0;
   margin-bottom: 1rem;
 }
-.HomeInfo .noticias .noticias-main .noticias-box .noticia-image img {
+.noticias .noticias-main .noticias-box .noticia-image img {
   width: 100%;
   border-radius: 10px;
 }
-.HomeInfo .noticias .noticias-main .noticias-box .texto-noticia {
+.noticias .noticias-main .noticias-box .texto-noticia {
   font-size: 1rem;
   text-align: justify;
 }
@@ -302,6 +348,8 @@ header .logoICR {
   margin-bottom: 1rem;
   padding: 0.5rem;
   width: 95%;
+  background-color: rgba(24, 186, 226, 0.274);
+  border: none;
 }
 .Contato .contactArea .card .card-body {
   padding-top: 0.5rem;

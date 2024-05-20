@@ -1,3 +1,4 @@
+
 @mixin pd-mg-default ($pd-default, $mg-default){
     padding: $pd-default;
     margin: $mg-default;
@@ -46,3 +47,13 @@
     width: $w;
     margin: $m;
 }
+
+@mixin breakpoint($point) {
+    @if $point == small {
+      @media (max-width: 576px) { @content; }
+    } @else if $point == medium {
+      @media (min-width: 577px) and (max-width: 768px) { @content; }
+    } @else if $point == large {
+      @media (min-width: 769px) { @content; }
+    }
+  }

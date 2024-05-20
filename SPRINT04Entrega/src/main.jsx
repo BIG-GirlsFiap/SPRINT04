@@ -20,8 +20,8 @@ const router = createBrowserRouter([{
     {index: true, element: <Home />},
     
     {
-      path: 'contato',
-      element: <Contato />,
+      path: 'Contato',
+      element: <Contato/>,
     },
     {
       path: 'Portal',
