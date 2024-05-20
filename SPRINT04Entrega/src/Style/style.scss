@@ -24,9 +24,20 @@ header {
     rgb(149, 223, 212) 100%
   );
   height: fit-content;
+
   .head {
     @include mixins.flex-config(row, space-between, center);
     @include mixins.sizings();
+
+    @include mixins.breakpoint(small) {
+      // @include mixins.sizings(95%, 0 auto);
+      @include mixins.py(0.5rem, 0.5rem);
+      @include mixins.px(2rem, 1rem);
+    }
+
+    @include mixins.breakpoint(medium) {
+      @include mixins.sizings();
+    }
 
     .Logo {
       width: 20%;
@@ -43,134 +54,221 @@ header {
     }
   }
   .logoICR {
-    width: 75px;
+    width: 45%;
   }
   nav {
-    background-color: transparent;
-    border: none;
-    list-style: none;
+    width: 40%;
+
     .menu {
-      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
       width: 100%;
-      
-      border: none;
-      
-      text-decoration: none;
-      button{
+      display: flex;
+      @include mixins.px(2rem, 2rem);
+      background-color: rgba(255, 255, 255, 0.61);
+      padding: 0;
+      border-radius: 10px;
+      @include mixins.breakpoint(small) {
+        flex-direction: column-reverse;
+        white-space: wrap;
+        @include mixins.sizings(95%, 0 auto);
+      }
+
+      @include mixins.breakpoint(medium) {
+      }
+      button {
+        @include mixins.py(0.5rem, 0.5rem);
+        @include mixins.px(1rem, 1rem);
+        border: 1px solid $color-black;
+        gap: 10px;
         border: none;
         background-color: transparent;
         text-decoration: none;
-        
-      }
-      
-    }
-  }
-}
-.HomeInfo {
-  @include mixins.sizings();
-}
-.content {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
+        transition: 0.4s;
+        @include mixins.breakpoint(small) {
+          @include mixins.py(0.5rem, 0.5rem);
+          @include mixins.px(0.5rem, 0.5rem);
+          max-width: 100%;
+          white-space: wrap;
+        }
 
-  .title {
-    h1 {
-      font-size: 2rem;
-    }
-    h3 {
-      font-size: 1rem;
-    }
-  }
-}
-.apoio-psicologico {
-  margin: 0 auto;
-  text-align: justify;
-  height: fit-content;
-  min-width: 300px;
-  @include mixins.py(0, 1rem);
-  gap: 1rem;
-  .card {
-    gap: 1rem;
-    @include mixins.px(1rem, 1rem);
-    @include mixins.py(1rem, 1rem);
-    @include mixins.my(0, 1rem);
-    background-color: $color-blue-light;
-    border: none;
-    gap: 1rem;
-  }
-  .btns {
-    display: flex;
-    @include mixins.sizings();
-    justify-content: space-between;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    align-tracks: center;
-    gap: 1rem;
-    button {
-      width: 45%;
-      margin: 0.5rem;
-      padding: 4px;
-      gap: 1rem;
-      background-color: $color-blue;
-      border: none;
-      border-radius: 5px;
-    }
-  }
-}
-.Accordion {
-  text-align: justify;
-  height: fit-content;
-  iframe {
-    width: 100%;
-    height: 100%;
-    @include mixins.sizings();
-    display: flex;
-    @include mixins.py(1rem, 1rem);
-    // @include mixins.px(1rem, 1rem);
-  }
-}
-.noticias {
-  width: 100%;
+        @include mixins.breakpoint(medium) {
+          @include mixins.py(0.5rem, 0.5rem);
+          @include mixins.px(0.5rem, 0.5rem);
+          min-width: 70%;
+          white-space: wrap;
+        }
 
-  .noticias-main {
-    border: 0.5px solid $color-gray-light;
-    border-radius: 10px;
-    .noticias-box {
-      background-color: $color-white;
-      @include mixins.py(1rem, 1rem);
-      @include mixins.px(1rem, 1rem);
-      @include mixins.my(0, 1rem);
-      border-radius: 10px;
+        a {
+          @include mixins.px(1rem, 1rem);
+          color: $color-black;
+          list-style: none;
+          text-decoration: none;
+          gap: 10px;
+          white-space: wrap;
+          transition: 0.3s;
+          :hover {
+            background-color: $color-blue-light;
+            border-radius: 10px;
+            @include mixins.py(0.5rem, 0.5rem);
+            @include mixins.px(1rem, 1rem);
+          }
+          @include mixins.breakpoint(small) {
+            @include mixins.py(0.3rem, 0.3rem);
+            min-width: 70%;
+            @include mixins.px(0.3rem, 0.3rem);
+            white-space: wrap;
+          }
 
-      h1 {
-        font-size: 1.5rem;
-        text-align: center;
-        font-weight: bold;
-        text-decoration: wavy;
-      }
-      .descrition {
-        font-size: 1rem;
-        text-align: justify;
-      }
-
-      .noticia-image {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include mixins.my(0, 1rem);
-
-        img {
-          width: 100%;
-          border-radius: 10px;
+          @include mixins.breakpoint(medium) {
+            @include mixins.py(0.3rem, 0.3rem);
+            @include mixins.px(0.1rem, 0.1rem);
+            white-space: wrap;
+          }
         }
       }
+    }
+  }
+  .logoParceiros {
+    width: 30%;
+    justify-content: end;
+    @include mixins.breakpoint(small) {
+      display: none;
+    }
 
-      .texto-noticia {
+    @include mixins.breakpoint(medium) {
+      display: none;
+    }
+    // @include mixins.breakpoint(large) {
+    //   display: none;
+    // }
+    img {
+      @include mixins.breakpoint(small) {
+        display: none;
+      }
+
+      @include mixins.breakpoint(medium) {
+        display: none;
+      }
+      // @include mixins.breakpoint(large) {
+      //   display: none;
+      // }
+    }
+  }
+}
+
+.HomeInfo {
+  @include mixins.sizings();
+  @include mixins.py(1rem, 1rem);
+  .content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include mixins.breakpoint(small) {
+      grid-template-columns: 1fr;
+    }
+    @include mixins.breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+    .title {
+      h1 {
+        font-size: 2rem;
+      }
+      h3 {
         font-size: 1rem;
-        text-align: justify;
+      }
+    }
+    .apoio-psicologico {
+      margin: 0 auto;
+      text-align: justify;
+      height: fit-content;
+      min-width: 300px;
+      @include mixins.py(0, 1rem);
+      gap: 1rem;
+      .card {
+        gap: 1rem;
+        @include mixins.px(1rem, 1rem);
+        @include mixins.py(1rem, 1rem);
+        @include mixins.my(0, 1rem);
+        background-color: $color-blue-light;
+        border: none;
+        gap: 1rem;
+      }
+      .btns {
+        display: flex;
+        @include mixins.sizings();
+        justify-content: space-between;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        align-tracks: center;
+        gap: 1rem;
+        button {
+          width: 45%;
+          margin: 0.5rem;
+          padding: 4px;
+          gap: 1rem;
+          background-color: $color-blue;
+          border: none;
+          border-radius: 5px;
+        }
+      }
+    }
+    .Accordion {
+      text-align: justify;
+      height: fit-content;
+      iframe {
+        width: 100%;
+        height: 100%;
+        @include mixins.sizings();
+        display: flex;
+        @include mixins.py(1rem, 1rem);
+        // @include mixins.px(1rem, 1rem);
+      }
+    }
+    .noticias {
+      width: 100%;
+
+      .noticias-main {
+        border: 0.5px solid $color-gray-light;
+        border-radius: 10px;
+        .noticias-box {
+          background-color: $color-white;
+          @include mixins.py(1rem, 1rem);
+          @include mixins.px(1rem, 1rem);
+          @include mixins.my(0, 1rem);
+          border-radius: 10px;
+
+          h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: wavy;
+          }
+          .descrition {
+            font-size: 1rem;
+            text-align: justify;
+          }
+
+          .noticia-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include mixins.my(0, 1rem);
+
+            img {
+              width: 100%;
+              border-radius: 10px;
+            }
+          }
+
+          .texto-noticia {
+            font-size: 1rem;
+            text-align: justify;
+          }
+        }
       }
     }
   }
@@ -207,7 +305,6 @@ header {
           form {
             margin: 0 auto;
             position: relative;
-
             align-items: center;
             justify-content: center;
             padding: 30px;
@@ -236,6 +333,8 @@ header {
                 display: inline;
                 border: none;
                 border-radius: 10px;
+                background-color: rgb(212, 112, 223);
+                font-weight: 600;
                 cursor: pointer;
               }
             }
@@ -264,6 +363,10 @@ header {
           gap: 1rem;
           background: transparent;
           margin: 0.5rem;
+          transition: 0.4s;
+          :hover {
+            scale: 1.1;
+          }
         }
         button img {
           width: 100%;
@@ -279,6 +382,7 @@ header {
     }
   }
 }
+
 .Contato {
   @include mixins.sizings();
   height: 20%;
@@ -307,7 +411,7 @@ header {
         @include mixins.sizings(100%, 0 auto);
         padding: 10%;
         border-radius: 10px;
-        background-color: rgba(85, 172, 222, 0.733);
+        background-color: $color-blue-light;
         h2 {
           font-weight: 400;
           padding-bottom: 1rem;
@@ -320,12 +424,13 @@ header {
           textarea,
           button {
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             text-align: center;
+            align-items: center;
             @include mixins.py(0.5rem, 0.5rem);
           }
           button {
-            background-color: $primary-color;
+            background-color: $color-blue;
           }
         }
       }
@@ -377,36 +482,108 @@ footer {
   padding: 0;
   .foot {
     @include mixins.sizings();
-    height: 100px;
+    // height: 100px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 2fr 1fr;
     @include mixins.py(0.3rem, 0.3rem);
     align-items: center;
     justify-content: center;
     color: $color-black;
+    white-space: wrap;
+    @include mixins.breakpoint(small) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      align-items: center;
+      justify-content: center;
+      @include mixins.px(0.5rem, 0.5rem);
+    }
+    @include mixins.breakpoint(medium) {
+      @include mixins.py(1rem, 0.3rem);
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+
+      align-items: center;
+      justify-content: center;
+    }
     section {
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    img {
-      @include mixins.sizings(100px, 40px);
-      margin-right: 1.5rem;
-    }
-    a {
-      justify-content: space-around;
-      width: 100%;
-      margin: 0 auto;
-      margin-right: 1rem;
-      text-decoration: none;
-      color: $color-black;
       gap: 1rem;
+      @include mixins.breakpoint(small) {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      @include mixins.breakpoint(medium) {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      .creators {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        a {
+          justify-content: space-around;
+          width: 100%;
+          margin: 0 auto;
+          margin-right: 1rem;
+          text-decoration: none;
+          color: $color-black;
+          gap: 1rem;
+      }
     }
-    svg {
-      @include mixins.div-size(30px, 40px);
-      margin-right: 1rem;
-      gap: 1rem;
+      .apps {
+        img {
+          @include mixins.div-size(120px, 40px);
+          @include mixins.my(0.5rem, 0.5rem);
+          @include mixins.mx(0.5rem, 0.5rem);
+          
+          @include mixins.px(0.5rem, 0.5rem);
+          @include mixins.breakpoint(small) {
+            
+          }
+          @include mixins.breakpoint(medium) {
+            
+          }
+        }
+        a {
+          justify-content: space-around;
+          width: 100%;
+          margin: 0 auto;
+          margin-right: 1rem;
+          text-decoration: none;
+          color: $color-black;
+          gap: 1rem;
+          @include mixins.breakpoint(small) {
+            @include mixins.sizings(100px, 40px);
+            margin-right: 0.5rem;
+          }
+          @include mixins.breakpoint(medium) {
+            @include mixins.sizings(100px, 40px);
+            margin-right: 0.5rem;
+            flex-direction: row;
+          }
+        }
+      }
+      svg {
+        @include mixins.div-size(30px, 40px);
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        gap: 1rem;
+        @include mixins.breakpoint(small) {
+          align-items: center;
+          justify-content: center;
+        }
+
+        @include mixins.breakpoint(medium) {
+          @include mixins.py(0.3rem, 0.3rem);
+          @include mixins.px(0.1rem, 0.1rem);
+          white-space: wrap;
+        }
+      }
     }
   }
 }

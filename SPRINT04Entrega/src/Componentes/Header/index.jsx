@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 
 function Header({ menuItems }) {
-
-
   return (
     <header>
       <main className="head">
@@ -15,23 +13,17 @@ function Header({ menuItems }) {
             {menuItems.map((menuItem, index) => (
               <div key={index}>
                 <button key={index}>
-                  <Link to={menuItem.link}>{menuItem.text}</Link>
+                  <a href="">
+                    <Link to={menuItem.link}>{menuItem.text}</Link>
+                  </a>
                 </button>
               </div>
             ))}
-
           </div>
-          {/* <ul className="menu" >
-            {menuItems.map((menuItem, index) => (
-              <li key={index} >
-                <button >
-                  <Link to={menuItem.link}>{menuItem.text}</Link>
-                </button>
-              </li>
-            ))}
-          </ul> */}
         </nav>
-        <img src="https://icr.usp.br/wp-content/uploads/2017/11/logos_icr_parceiros.png" />
+        <section className="logoParceiros ">
+          <img src="https://icr.usp.br/wp-content/uploads/2017/11/logos_icr_parceiros.png" />
+        </section>
       </main>
     </header >
   );

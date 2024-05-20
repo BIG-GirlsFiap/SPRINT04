@@ -8,10 +8,7 @@ function ContactForm() {
         <div>
           <h1>HUMANIZA ICR</h1>
           <p > Instituto da Criança e do Adolescente | HC FMUSP</p>
-
         </div>
-
-
       </section>
       <section className="contactArea">
 
@@ -25,15 +22,7 @@ function ContactForm() {
                 <a href="https://maps.app.goo.gl/K6RubGJ7UCqn9it48" class="card-link">Av. Dr. Enéas Carvakho de Aguiar, 647 - Cerqueira César, Sâo Paulo</a>
               </p>
               <iframe src="https://api.wo-cloud.com/content/widget/?geoObjectKey=3705599&language=pt&region=BR&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius" name="CW2" scrolling="no" frameborder="0" ></iframe>
-
-              
             </div>
-            <div>
-
-            </div>
-          </div>
-          <div>
-            
           </div>
         </div>
         <div id="contact">

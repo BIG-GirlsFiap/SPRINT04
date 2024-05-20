@@ -21,6 +21,20 @@ header .head {
   width: 80%;
   margin: 0 auto;
 }
+@media (max-width: 576px) {
+  header .head {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  header .head {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 header .head .Logo {
   width: 20%;
   display: flex;
@@ -37,43 +51,153 @@ header .head .Logo p {
   margin-top: 0.4rem;
 }
 header .logoICR {
-  width: 75px;
+  width: 45%;
 }
 header nav {
-  background-color: transparent;
-  border: none;
-  list-style: none;
+  width: 40%;
 }
 header nav .menu {
-  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
   width: 100%;
-  border: none;
-  text-decoration: none;
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: rgba(255, 255, 255, 0.61);
+  padding: 0;
+  border-radius: 10px;
+}
+@media (max-width: 576px) {
+  header nav .menu {
+    flex-direction: column-reverse;
+    white-space: wrap;
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 header nav .menu button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid black;
+  gap: 10px;
   border: none;
   background-color: transparent;
   text-decoration: none;
+  transition: 0.4s;
+}
+@media (max-width: 576px) {
+  header nav .menu button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100%;
+    white-space: wrap;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  header nav .menu button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    min-width: 70%;
+    white-space: wrap;
+  }
+}
+header nav .menu button a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: black;
+  list-style: none;
+  text-decoration: none;
+  gap: 10px;
+  white-space: wrap;
+  transition: 0.3s;
+}
+header nav .menu button a :hover {
+  background-color: rgba(24, 186, 226, 0.274);
+  border-radius: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (max-width: 576px) {
+  header nav .menu button a {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    min-width: 70%;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    white-space: wrap;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  header nav .menu button a {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    white-space: wrap;
+  }
+}
+header .logoParceiros {
+  width: 30%;
+  justify-content: end;
+}
+@media (max-width: 576px) {
+  header .logoParceiros {
+    display: none;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  header .logoParceiros {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  header .logoParceiros img {
+    display: none;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  header .logoParceiros img {
+    display: none;
+  }
 }
 
 .HomeInfo {
   width: 80%;
   margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-
-.content {
+.HomeInfo .content {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.content .title h1 {
+@media (max-width: 576px) {
+  .HomeInfo .content {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .HomeInfo .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.HomeInfo .content .title h1 {
   font-size: 2rem;
 }
-.content .title h3 {
+.HomeInfo .content .title h3 {
   font-size: 1rem;
 }
-
-.apoio-psicologico {
+.HomeInfo .content .apoio-psicologico {
   margin: 0 auto;
   text-align: justify;
   height: -moz-fit-content;
@@ -83,7 +207,7 @@ header nav .menu button {
   padding-bottom: 1rem;
   gap: 1rem;
 }
-.apoio-psicologico .card {
+.HomeInfo .content .apoio-psicologico .card {
   gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -95,7 +219,7 @@ header nav .menu button {
   border: none;
   gap: 1rem;
 }
-.apoio-psicologico .btns {
+.HomeInfo .content .apoio-psicologico .btns {
   display: flex;
   width: 80%;
   margin: 0 auto;
@@ -107,7 +231,7 @@ header nav .menu button {
   align-tracks: center;
   gap: 1rem;
 }
-.apoio-psicologico .btns button {
+.HomeInfo .content .apoio-psicologico .btns button {
   width: 45%;
   margin: 0.5rem;
   padding: 4px;
@@ -116,13 +240,12 @@ header nav .menu button {
   border: none;
   border-radius: 5px;
 }
-
-.Accordion {
+.HomeInfo .content .Accordion {
   text-align: justify;
   height: -moz-fit-content;
   height: fit-content;
 }
-.Accordion iframe {
+.HomeInfo .content .Accordion iframe {
   width: 100%;
   height: 100%;
   width: 80%;
@@ -131,15 +254,14 @@ header nav .menu button {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
-.noticias {
+.HomeInfo .content .noticias {
   width: 100%;
 }
-.noticias .noticias-main {
+.HomeInfo .content .noticias .noticias-main {
   border: 0.5px solid rgba(128, 128, 128, 0.356);
   border-radius: 10px;
 }
-.noticias .noticias-main .noticias-box {
+.HomeInfo .content .noticias .noticias-main .noticias-box {
   background-color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -149,29 +271,29 @@ header nav .menu button {
   margin-bottom: 1rem;
   border-radius: 10px;
 }
-.noticias .noticias-main .noticias-box h1 {
+.HomeInfo .content .noticias .noticias-main .noticias-box h1 {
   font-size: 1.5rem;
   text-align: center;
   font-weight: bold;
   -webkit-text-decoration: wavy;
           text-decoration: wavy;
 }
-.noticias .noticias-main .noticias-box .descrition {
+.HomeInfo .content .noticias .noticias-main .noticias-box .descrition {
   font-size: 1rem;
   text-align: justify;
 }
-.noticias .noticias-main .noticias-box .noticia-image {
+.HomeInfo .content .noticias .noticias-main .noticias-box .noticia-image {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 0;
   margin-bottom: 1rem;
 }
-.noticias .noticias-main .noticias-box .noticia-image img {
+.HomeInfo .content .noticias .noticias-main .noticias-box .noticia-image img {
   width: 100%;
   border-radius: 10px;
 }
-.noticias .noticias-main .noticias-box .texto-noticia {
+.HomeInfo .content .noticias .noticias-main .noticias-box .texto-noticia {
   font-size: 1rem;
   text-align: justify;
 }
@@ -239,6 +361,8 @@ header nav .menu button {
   display: inline;
   border: none;
   border-radius: 10px;
+  background-color: rgb(212, 112, 223);
+  font-weight: 600;
   cursor: pointer;
 }
 .PortalContent .mainInfo #avaliation {
@@ -261,6 +385,10 @@ header nav .menu button {
   gap: 1rem;
   background: transparent;
   margin: 0.5rem;
+  transition: 0.4s;
+}
+.PortalContent .mainInfo #avaliation #avaliation-box button :hover {
+  scale: 1.1;
 }
 .PortalContent .mainInfo #avaliation #avaliation-box button img {
   width: 100%;
@@ -313,7 +441,7 @@ header nav .menu button {
   margin: 0 auto;
   padding: 10%;
   border-radius: 10px;
-  background-color: rgba(85, 172, 222, 0.733);
+  background-color: rgba(24, 186, 226, 0.274);
 }
 .Contato .contactArea #contact .form-contact h2 {
   font-weight: 400;
@@ -328,13 +456,14 @@ header nav .menu button {
 .Contato .contactArea #contact .form-contact form textarea,
 .Contato .contactArea #contact .form-contact form button {
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
+  align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 .Contato .contactArea #contact .form-contact form button {
-  background-color: #0d6efd;
+  background-color: rgb(85, 171, 222);
 }
 .Contato .contactArea #contact iframe {
   width: 100%;
@@ -383,27 +512,61 @@ footer {
 footer .foot {
   width: 80%;
   margin: 0 auto;
-  height: 100px;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 70% 30%;
+  grid-template-rows: 2fr 1fr;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   align-items: center;
   justify-content: center;
   color: black;
+  white-space: wrap;
+}
+@media (max-width: 576px) {
+  footer .foot {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  footer .foot {
+    padding-top: 1rem;
+    padding-bottom: 0.3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
 }
 footer .foot section {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
-footer .foot img {
-  width: 100px;
-  margin: 40px;
-  margin-right: 1.5rem;
+@media (max-width: 576px) {
+  footer .foot section {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
-footer .foot a {
+@media (min-width: 577px) and (max-width: 768px) {
+  footer .foot section {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+footer .foot section .creators {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+footer .foot section .creators a {
   justify-content: space-around;
   width: 100%;
   margin: 0 auto;
@@ -412,9 +575,60 @@ footer .foot a {
   color: black;
   gap: 1rem;
 }
-footer .foot svg {
+footer .foot section .apps img {
+  width: 120px;
+  height: 40px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+footer .foot section .apps a {
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: black;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  footer .foot section .apps a {
+    width: 100px;
+    margin: 40px;
+    margin-right: 0.5rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  footer .foot section .apps a {
+    width: 100px;
+    margin: 40px;
+    margin-right: 0.5rem;
+    flex-direction: row;
+  }
+}
+footer .foot section svg {
   width: 30px;
   height: 40px;
+  align-items: center;
+  justify-content: center;
   margin-right: 1rem;
   gap: 1rem;
+}
+@media (max-width: 576px) {
+  footer .foot section svg {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  footer .foot section svg {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    white-space: wrap;
+  }
 }/*# sourceMappingURL=style.css.map */

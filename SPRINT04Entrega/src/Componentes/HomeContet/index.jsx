@@ -6,7 +6,7 @@ import Carousel from 'react-bootstrap/Carousel';
 function HomeContent() {
   return (
     <main className="HomeInfo">
-      <section className='content pt-5'>
+      <section className='content '>
         <section className='infos-main '>
           <div className="title">
             <h1 className="">Procedimentos</h1>
