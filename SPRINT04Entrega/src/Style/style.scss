@@ -6,6 +6,7 @@ $color-gray-light: rgba(128, 128, 128, 0.356);
 $primary-color: #0d6efd;
 $color-blue: rgb(85, 171, 222);
 $color-blue-light: rgba(24, 186, 226, 0.274);
+$color-purple: rgba(212, 112, 223, 0.815);
 
 //@use "variaveis";
 // @import "~bootstrap/scss/bootstrap";
@@ -25,114 +26,170 @@ header {
   );
   height: fit-content;
 
+  display: grid;
+
   .head {
     @include mixins.flex-config(row, space-between, center);
     @include mixins.sizings();
 
     @include mixins.breakpoint(small) {
-      // @include mixins.sizings(95%, 0 auto);
-      @include mixins.py(0.5rem, 0.5rem);
-      @include mixins.px(2rem, 1rem);
+      // @include mixins.sizings();
+      @include mixins.my(0.5rem, 0.5rem);
+      // @include mixins.py(0.5rem, 0.5rem);
+      //@include mixins.mx(1rem, 1rem);
+      grid-template-rows: 1fr 1fr;
     }
 
     @include mixins.breakpoint(medium) {
       @include mixins.sizings();
+      grid-template-columns: 1fr 1fr;
     }
 
     .Logo {
+      display: flex;
       width: 20%;
-      @include mixins.flex-config(row, center, center);
-      font-weight: bolder;
-      font-size: 0.8rem;
+      align-items: center;
+      align-content: center;
+      justify-content: flex-start;
+      @include mixins.breakpoint(small) {
+        display: flex;
+        width: 50%;
+        @include mixins.sizings();
+        // flex-direction: column;
+      }
+      @include mixins.breakpoint(medium) {
+        display: flex;
+        // @include mixins.sizings();
+        justify-content: flex-start;
+        width: 40%;
+        // flex-direction: column;
+      }
 
+      img {
+        width: 40%;
+        @include mixins.flex-config(row, center, center);
+        font-weight: bolder;
+        font-size: 0.8rem;
+        @include mixins.breakpoint(small) {
+          display: none;
+        }
+
+        @include mixins.breakpoint(medium) {
+          width: 25%;
+        }
+      }
       p {
         text-transform: uppercase;
         align-items: center;
         align-content: center;
         margin-top: 0.4rem;
+        font-size: 0.85rem;
+        @include mixins.breakpoint(small) {
+          width: 100%;
+          font-size: 0.9rem;
+        }
+        @include mixins.breakpoint(medium) {
+          width: 75%;
+        }
       }
     }
   }
-  .logoICR {
-    width: 45%;
-  }
-  nav {
-    width: 40%;
 
+  nav {
+    width: 60%;
+
+    @include mixins.breakpoint(small) {
+      width: 60%;
+      display: flex;
+      justify-content: end;
+    }
+
+    @include mixins.breakpoint(medium) {
+      width: 45%;
+    }
     .menu {
       align-items: center;
       justify-content: center;
       align-self: center;
-      width: 100%;
+      width: 80%;
+      margin: 0 auto;
       display: flex;
-      @include mixins.px(2rem, 2rem);
+      @include mixins.px(0.5rem, 0.5rem);
       background-color: rgba(255, 255, 255, 0.61);
       padding: 0;
       border-radius: 10px;
       @include mixins.breakpoint(small) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         white-space: wrap;
-        @include mixins.sizings(95%, 0 auto);
+        width: 70%;
+        justify-content: end;
       }
 
       @include mixins.breakpoint(medium) {
+        width: 80%;
       }
-      button {
-        @include mixins.py(0.5rem, 0.5rem);
-        @include mixins.px(1rem, 1rem);
-        border: 1px solid $color-black;
-        gap: 10px;
-        border: none;
-        background-color: transparent;
-        text-decoration: none;
-        transition: 0.4s;
-        @include mixins.breakpoint(small) {
+      .menuItem {
+        display: flex;
+        button {
           @include mixins.py(0.5rem, 0.5rem);
           @include mixins.px(0.5rem, 0.5rem);
-          max-width: 100%;
-          white-space: wrap;
-        }
-
-        @include mixins.breakpoint(medium) {
-          @include mixins.py(0.5rem, 0.5rem);
-          @include mixins.px(0.5rem, 0.5rem);
-          min-width: 70%;
-          white-space: wrap;
-        }
-
-        a {
-          @include mixins.px(1rem, 1rem);
-          color: $color-black;
-          list-style: none;
-          text-decoration: none;
+          border: 1px solid $color-black;
           gap: 10px;
-          white-space: wrap;
-          transition: 0.3s;
-          :hover {
-            background-color: $color-blue-light;
-            border-radius: 10px;
-            @include mixins.py(0.5rem, 0.5rem);
-            @include mixins.px(1rem, 1rem);
-          }
+          border: none;
+          background-color: transparent;
+          text-decoration: none;
+          transition: 0.4s;
           @include mixins.breakpoint(small) {
             @include mixins.py(0.3rem, 0.3rem);
-            min-width: 70%;
             @include mixins.px(0.3rem, 0.3rem);
+            max-width: 100%;
             white-space: wrap;
           }
 
           @include mixins.breakpoint(medium) {
-            @include mixins.py(0.3rem, 0.3rem);
-            @include mixins.px(0.1rem, 0.1rem);
+            @include mixins.py(0.5rem, 0.5rem);
+            @include mixins.px(0.5rem, 0.5rem);
+            min-width: 70%;
             white-space: wrap;
+          }
+
+          a {
+            @include mixins.px(1rem, 1rem);
+            color: $color-black;
+            list-style: none;
+            text-decoration: none;
+            gap: 10px;
+            white-space: wrap;
+            transition: 0.3s;
+            :hover {
+              background-color: $color-blue-light;
+              border-radius: 10px;
+              @include mixins.py(0.5rem, 0.5rem);
+              @include mixins.px(1rem, 1rem);
+            }
+            @include mixins.breakpoint(small) {
+              @include mixins.py(0.3rem, 0.3rem);
+              min-width: 70%;
+              @include mixins.px(0.3rem, 0.3rem);
+              white-space: wrap;
+            }
+
+            @include mixins.breakpoint(medium) {
+              @include mixins.py(0.3rem, 0.3rem);
+              @include mixins.px(0.1rem, 0.1rem);
+              white-space: wrap;
+            }
           }
         }
       }
     }
   }
   .logoParceiros {
-    width: 30%;
+    width: 20%;
     justify-content: end;
+    img {
+      width: 100%;
+    }
     @include mixins.breakpoint(small) {
       display: none;
     }
@@ -184,16 +241,35 @@ header {
       text-align: justify;
       height: fit-content;
       min-width: 300px;
-      @include mixins.py(0, 1rem);
+      @include mixins.py(0, 0);
       gap: 1rem;
       .card {
         gap: 1rem;
         @include mixins.px(1rem, 1rem);
         @include mixins.py(1rem, 1rem);
-        @include mixins.my(0, 1rem);
+        @include mixins.my(0, 0.5rem);
         background-color: $color-blue-light;
         border: none;
-        gap: 1rem;
+        img{
+          @include mixins.sizings(100%, 0 auto);
+          
+          border-radius: 10px;
+        }
+        h4, p {
+          padding: 0;
+          margin: 0;
+
+        }
+        ul{
+          @include mixins.py(0, 0);
+          @include mixins.my(0,0);
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          li{
+            width: 75%;
+            text-align: left;
+          }
+        }
       }
       .btns {
         display: flex;
@@ -206,7 +282,8 @@ header {
         align-tracks: center;
         gap: 1rem;
         button {
-          width: 45%;
+          @include mixins.sizings(60%, 0 auto);
+          
           margin: 0.5rem;
           padding: 4px;
           gap: 1rem;
@@ -281,9 +358,17 @@ header {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1rem;
+    @include mixins.breakpoint(small) {
+      grid-template-columns: 1fr;
+    }
+    @include mixins.breakpoint(medium) {
+      grid-template-columns: 50% 50%;
+    }
     .content {
+      display: flex;
+      height: fit-content;
       #portal-paciente {
-        position: relative;
+        // position: relative;
         background: rgb(211, 112, 223);
         background: linear-gradient(
           130deg,
@@ -296,46 +381,63 @@ header {
         border-radius: 10px;
         #portal {
           width: 100%;
-          position: relative;
+          // position: relative;
           align-items: center;
           justify-content: center;
+          
           h1 {
             font-size: 1.6rem;
           }
+          
+        }
+        .forms {
+          @include mixins.sizings(80%, 0 auto);
+          
           form {
-            margin: 0 auto;
-            position: relative;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            border-radius: 10px;
-            .form-box {
-              align-items: center;
+            @include mixins.py(0.5rem, 0.5rem);
+            @include mixins.sizings(100%, 0 auto);
+            gap: 1rem;
+           
+            gap: 1rem;
+            label {
+              height: 3rem;
               width: 100%;
-              margin: 0 auto;
-              padding: 12px;
               border-radius: 10px;
-              justify-content: center;
-              @include mixins.py(0.3rem, 0.3rem);
-              input {
-                width: 250px;
-                border-radius: 60px;
+              border-radius: 10px;
+              input{
+                width: 100%;
+                height: 2rem;
+                align-items: center;
+                
+                @include mixins.my(0.5rem, 0.5rem);
                 text-align: center;
-                border: 1px solid $color-black;
-                margin-bottom: 1rem;
+                border-radius: 10px;
+                border: 0.1rem solid $color-purple;
+                background-color: $color-gray-light;
+                &::placeholder{
+                  color: $color-black;
+                }
+              }
+              
               }
               button {
                 width: 100%;
-                margin: 0 auto;
-                padding: 0.5rem;
-                align-items: center;
-                justify-content: center;
-                display: inline;
+                height: 2.5rem;
+                
+                @include mixins.sizings(100%, 0 auto);
                 border: none;
+                background-color: $color-purple;
                 border-radius: 10px;
-                background-color: rgb(212, 112, 223);
-                font-weight: 600;
-                cursor: pointer;
+                // margin: 0 auto;
+                // padding: 0.5rem;
+                // align-items: center;
+                // justify-content: center;
+                // display: inline;
+                // border: none;
+                // border-radius: 10px;
+                // background-color: rgb(212, 112, 223);
+                // font-weight: 600;
+                // cursor: pointer;
               }
             }
           }
@@ -350,7 +452,70 @@ header {
         rgba(245, 201, 124, 0.89) 100%
       );
       border-radius: 10px;
-      padding: 2rem;
+      @include mixins.py(2rem, 2rem);
+      @include mixins.px(2.5rem, 2.5rem);
+      @include mixins.sizings(100%, 0 auto);
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+      h1{
+        text-align: center;
+        font-size: 2.5rem;
+      }
+      p, h4, .checkboxes{
+        text-align: center;
+      }
+      .checkboxes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include mixins.sizings(50%, 0 auto);
+        @include mixins.py(0, 1rem);
+      }
+      #checkbox-box {
+        font-size: 1rem;
+      }
+      .exame-container {
+        @include mixins.py(1rem, 1rem);
+        @include mixins.sizings(80%, 0 auto);
+        .exame-container-checkbox {
+          position: sticky;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+      }
+      .checkbox-consultas {
+        @include mixins.py(1rem, 1rem);
+        @include mixins.sizings(80%, 0 auto);
+        position: sticky;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        gap: 1.5rem;
+        color: $color-black;
+        
+        input {
+          height: 2rem;
+          border: none;
+          border-radius: 10px;
+          text-align: center;
+          background-color: $color-purple;
+          // color: $color-black;
+          font-weight: bolder;
+          cursor: pointer;
+          &::placeholder{
+            color: $color-black;
+          }
+          
+        }
+        input:focus{
+          outline: none;
+          background-color: transparent;
+          border: none;
+        }
+      }
+
       #avaliation-box {
         @include mixins.py(1rem, 1rem);
         align-items: center;
@@ -381,7 +546,7 @@ header {
       }
     }
   }
-}
+
 
 .Contato {
   @include mixins.sizings();
@@ -532,20 +697,18 @@ footer {
           text-decoration: none;
           color: $color-black;
           gap: 1rem;
+        }
       }
-    }
       .apps {
         img {
           @include mixins.div-size(120px, 40px);
           @include mixins.my(0.5rem, 0.5rem);
           @include mixins.mx(0.5rem, 0.5rem);
-          
+
           @include mixins.px(0.5rem, 0.5rem);
           @include mixins.breakpoint(small) {
-            
           }
           @include mixins.breakpoint(medium) {
-            
           }
         }
         a {
@@ -574,8 +737,7 @@ footer {
         margin-right: 1rem;
         gap: 1rem;
         @include mixins.breakpoint(small) {
-          align-items: center;
-          justify-content: center;
+          display: none;
         }
 
         @include mixins.breakpoint(medium) {

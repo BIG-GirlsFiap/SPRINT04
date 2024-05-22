@@ -11,7 +11,7 @@ function Header({ menuItems }) {
         <nav>
           <div className="menu">
             {menuItems.map((menuItem, index) => (
-              <div key={index}>
+              <div className='menuItem' key={index}>
                 <button key={index}>
                   <a href="">
                     <Link to={menuItem.link}>{menuItem.text}</Link>

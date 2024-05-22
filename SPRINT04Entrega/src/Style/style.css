@@ -12,6 +12,7 @@ header {
   background: linear-gradient(200deg, rgb(85, 171, 222) 15%, rgb(149, 223, 212) 100%);
   height: -moz-fit-content;
   height: fit-content;
+  display: grid;
 }
 header .head {
   display: flex;
@@ -23,20 +24,42 @@ header .head {
 }
 @media (max-width: 576px) {
   header .head {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    grid-template-rows: 1fr 1fr;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   header .head {
     width: 80%;
     margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
   }
 }
 header .head .Logo {
+  display: flex;
   width: 20%;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+@media (max-width: 576px) {
+  header .head .Logo {
+    display: flex;
+    width: 50%;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  header .head .Logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 40%;
+  }
+}
+header .head .Logo img {
+  width: 40%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -44,43 +67,83 @@ header .head .Logo {
   font-weight: bolder;
   font-size: 0.8rem;
 }
+@media (max-width: 576px) {
+  header .head .Logo img {
+    display: none;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  header .head .Logo img {
+    width: 25%;
+  }
+}
 header .head .Logo p {
   text-transform: uppercase;
   align-items: center;
   align-content: center;
   margin-top: 0.4rem;
+  font-size: 0.85rem;
 }
-header .logoICR {
-  width: 45%;
+@media (max-width: 576px) {
+  header .head .Logo p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  header .head .Logo p {
+    width: 75%;
+  }
 }
 header nav {
-  width: 40%;
+  width: 60%;
+}
+@media (max-width: 576px) {
+  header nav {
+    width: 60%;
+    display: flex;
+    justify-content: end;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  header nav {
+    width: 45%;
+  }
 }
 header nav .menu {
   align-items: center;
   justify-content: center;
   align-self: center;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   background-color: rgba(255, 255, 255, 0.61);
   padding: 0;
   border-radius: 10px;
 }
 @media (max-width: 576px) {
   header nav .menu {
-    flex-direction: column-reverse;
+    flex-direction: column;
     white-space: wrap;
-    width: 95%;
-    margin: 0 auto;
+    width: 70%;
+    justify-content: end;
   }
 }
-header nav .menu button {
+@media (min-width: 577px) and (max-width: 768px) {
+  header nav .menu {
+    width: 80%;
+  }
+}
+header nav .menu .menuItem {
+  display: flex;
+}
+header nav .menu .menuItem button {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   border: 1px solid black;
   gap: 10px;
   border: none;
@@ -89,17 +152,17 @@ header nav .menu button {
   transition: 0.4s;
 }
 @media (max-width: 576px) {
-  header nav .menu button {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  header nav .menu .menuItem button {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     max-width: 100%;
     white-space: wrap;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
-  header nav .menu button {
+  header nav .menu .menuItem button {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
@@ -108,7 +171,7 @@ header nav .menu button {
     white-space: wrap;
   }
 }
-header nav .menu button a {
+header nav .menu .menuItem button a {
   padding-left: 1rem;
   padding-right: 1rem;
   color: black;
@@ -118,7 +181,7 @@ header nav .menu button a {
   white-space: wrap;
   transition: 0.3s;
 }
-header nav .menu button a :hover {
+header nav .menu .menuItem button a :hover {
   background-color: rgba(24, 186, 226, 0.274);
   border-radius: 10px;
   padding-top: 0.5rem;
@@ -127,7 +190,7 @@ header nav .menu button a :hover {
   padding-right: 1rem;
 }
 @media (max-width: 576px) {
-  header nav .menu button a {
+  header nav .menu .menuItem button a {
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     min-width: 70%;
@@ -137,7 +200,7 @@ header nav .menu button a :hover {
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
-  header nav .menu button a {
+  header nav .menu .menuItem button a {
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     padding-left: 0.1rem;
@@ -146,8 +209,11 @@ header nav .menu button a :hover {
   }
 }
 header .logoParceiros {
-  width: 30%;
+  width: 20%;
   justify-content: end;
+}
+header .logoParceiros img {
+  width: 100%;
 }
 @media (max-width: 576px) {
   header .logoParceiros {
@@ -204,7 +270,7 @@ header .logoParceiros {
   height: fit-content;
   min-width: 300px;
   padding-top: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
   gap: 1rem;
 }
 .HomeInfo .content .apoio-psicologico .card {
@@ -214,10 +280,30 @@ header .logoParceiros {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   background-color: rgba(24, 186, 226, 0.274);
   border: none;
-  gap: 1rem;
+}
+.HomeInfo .content .apoio-psicologico .card img {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.HomeInfo .content .apoio-psicologico .card h4, .HomeInfo .content .apoio-psicologico .card p {
+  padding: 0;
+  margin: 0;
+}
+.HomeInfo .content .apoio-psicologico .card ul {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.HomeInfo .content .apoio-psicologico .card ul li {
+  width: 75%;
+  text-align: left;
 }
 .HomeInfo .content .apoio-psicologico .btns {
   display: flex;
@@ -232,7 +318,8 @@ header .logoParceiros {
   gap: 1rem;
 }
 .HomeInfo .content .apoio-psicologico .btns button {
-  width: 45%;
+  width: 60%;
+  margin: 0 auto;
   margin: 0.5rem;
   padding: 4px;
   gap: 1rem;
@@ -309,8 +396,22 @@ header .logoParceiros {
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
 }
+@media (max-width: 576px) {
+  .PortalContent .mainInfo {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .PortalContent .mainInfo {
+    grid-template-columns: 50% 50%;
+  }
+}
+.PortalContent .mainInfo .content {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .PortalContent .mainInfo .content #portal-paciente {
-  position: relative;
   background: rgb(211, 112, 223);
   background: linear-gradient(130deg, rgba(212, 112, 223, 0.815) 10%, rgba(245, 201, 124, 0.89) 100%);
   align-items: center;
@@ -320,58 +421,130 @@ header .logoParceiros {
 }
 .PortalContent .mainInfo .content #portal-paciente #portal {
   width: 100%;
-  position: relative;
   align-items: center;
   justify-content: center;
 }
 .PortalContent .mainInfo .content #portal-paciente #portal h1 {
   font-size: 1.6rem;
 }
-.PortalContent .mainInfo .content #portal-paciente #portal form {
+.PortalContent .mainInfo .content #portal-paciente .forms {
+  width: 80%;
   margin: 0 auto;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  border-radius: 10px;
 }
-.PortalContent .mainInfo .content #portal-paciente #portal form .form-box {
-  align-items: center;
+.PortalContent .mainInfo .content #portal-paciente .forms form {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   width: 100%;
   margin: 0 auto;
-  padding: 12px;
-  border-radius: 10px;
-  justify-content: center;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  gap: 1rem;
+  gap: 1rem;
 }
-.PortalContent .mainInfo .content #portal-paciente #portal form .form-box input {
-  width: 250px;
-  border-radius: 60px;
+.PortalContent .mainInfo .content #portal-paciente .forms form label {
+  height: 3rem;
+  width: 100%;
+  border-radius: 10px;
+  border-radius: 10px;
+}
+.PortalContent .mainInfo .content #portal-paciente .forms form label input {
+  width: 100%;
+  height: 2rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
-  border: 1px solid black;
-  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 0.1rem solid rgba(212, 112, 223, 0.815);
+  background-color: rgba(128, 128, 128, 0.356);
 }
-.PortalContent .mainInfo .content #portal-paciente #portal form .form-box button {
+.PortalContent .mainInfo .content #portal-paciente .forms form label input::-moz-placeholder {
+  color: black;
+}
+.PortalContent .mainInfo .content #portal-paciente .forms form label input::placeholder {
+  color: black;
+}
+.PortalContent .mainInfo .content #portal-paciente .forms form button {
+  width: 100%;
+  height: 2.5rem;
   width: 100%;
   margin: 0 auto;
-  padding: 0.5rem;
-  align-items: center;
-  justify-content: center;
-  display: inline;
   border: none;
+  background-color: rgba(212, 112, 223, 0.815);
   border-radius: 10px;
-  background-color: rgb(212, 112, 223);
-  font-weight: 600;
-  cursor: pointer;
 }
-.PortalContent .mainInfo #avaliation {
+.PortalContent #avaliation {
   background: rgb(211, 112, 223);
   background: linear-gradient(330deg, rgba(212, 112, 223, 0.815) 10%, rgba(245, 201, 124, 0.89) 100%);
   border-radius: 10px;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  width: 100%;
+  margin: 0 auto;
 }
-.PortalContent .mainInfo #avaliation #avaliation-box {
+.PortalContent #avaliation h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.PortalContent #avaliation p, .PortalContent #avaliation h4, .PortalContent #avaliation .checkboxes {
+  text-align: center;
+}
+.PortalContent #avaliation .checkboxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+.PortalContent #avaliation #checkbox-box {
+  font-size: 1rem;
+}
+.PortalContent #avaliation .exame-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.PortalContent #avaliation .exame-container .exame-container-checkbox {
+  position: sticky;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.PortalContent #avaliation .checkbox-consultas {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  position: sticky;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  gap: 1.5rem;
+  color: black;
+}
+.PortalContent #avaliation .checkbox-consultas input {
+  height: 2rem;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(212, 112, 223, 0.815);
+  font-weight: bolder;
+  cursor: pointer;
+}
+.PortalContent #avaliation .checkbox-consultas input::-moz-placeholder {
+  color: black;
+}
+.PortalContent #avaliation .checkbox-consultas input::placeholder {
+  color: black;
+}
+.PortalContent #avaliation .checkbox-consultas input:focus {
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+.PortalContent #avaliation #avaliation-box {
   padding-top: 1rem;
   padding-bottom: 1rem;
   align-items: center;
@@ -379,7 +552,7 @@ header .logoParceiros {
   align-self: center;
   text-align: center;
 }
-.PortalContent .mainInfo #avaliation #avaliation-box button {
+.PortalContent #avaliation #avaliation-box button {
   width: 20%;
   border: none;
   gap: 1rem;
@@ -387,16 +560,16 @@ header .logoParceiros {
   margin: 0.5rem;
   transition: 0.4s;
 }
-.PortalContent .mainInfo #avaliation #avaliation-box button :hover {
+.PortalContent #avaliation #avaliation-box button :hover {
   scale: 1.1;
 }
-.PortalContent .mainInfo #avaliation #avaliation-box button img {
+.PortalContent #avaliation #avaliation-box button img {
   width: 100%;
   background-color: transparent;
   border: none;
   border-radius: 50%;
 }
-.PortalContent .mainInfo #avaliation #avaliation-box #btn-avaliation {
+.PortalContent #avaliation #avaliation-box #btn-avaliation {
   position: relative;
   align-items: center;
 }
@@ -619,8 +792,7 @@ footer .foot section svg {
 }
 @media (max-width: 576px) {
   footer .foot section svg {
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {

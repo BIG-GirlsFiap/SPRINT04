@@ -6,6 +6,7 @@ import Contato from './pages/Contato'
 import Portal from './pages/PortalPaciente.jsx'
 import PageNotFound from './pages/PageNotFound'
 import Home from './pages/Home'
+// import Apoio from './pages/ApoioPsicologico'
 
 //import './index.css'
 import './style/style.css'
