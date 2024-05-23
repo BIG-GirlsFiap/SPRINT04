@@ -24,8 +24,6 @@ function ContactForm() {
         </div>
       </section>
       <section className="contactArea">
-
-
         <div>
           <div className="card">
             <div class="card-body">
