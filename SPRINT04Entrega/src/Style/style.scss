@@ -33,7 +33,7 @@ header {
     @include mixins.sizings();
 
     @include mixins.breakpoint(small) {
-      @include mixins.my(0.5rem, 0.5rem);
+      @include mixins.my(2rem, 1.5rem);
       
       //@include mixins.mx(1rem, 1rem);
       grid-template-rows: 2fr 1fr;

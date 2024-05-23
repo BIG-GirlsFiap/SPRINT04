@@ -1,18 +1,7 @@
 import HumanizaLogo from "../SVGs/HumanizaLogo.svg"
-import { useEffect, useState } from "react";
-import WeatherCard from "../WeatherCard/WeatherCard.jsx";
+
 function ContactForm() {
-  const [weather, setWeather] = useState([]);
-  console.log(setWeather);
-
-  useEffect(() => {
-    fetch("https://api.tomorrow.io/v4?apikey=ur2uEjajFSDj62XuJcRp62UQg679CeDQ")
-    .then(json => (setWeather(json), console.log(json)))
-    .then((response) => response.json())
-    
-    .then((json) => setWeather(json));
-  })
-
+  
   return (
     <main className="Contato">
       <section className="humaniza-title">
@@ -80,14 +69,7 @@ function ContactForm() {
           </div> */}
         </div>
       </section>
-      {/* <section>
-        <h1>title</h1>
-        <div>
-        {weather.map((clima,index)=>(
-            <WeatherCard key={index}/>
-          ))} 
-        </div>
-      </section> */}
+      
     </main>
 
   );
