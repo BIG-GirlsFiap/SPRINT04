@@ -24,7 +24,7 @@ Aspectos Técnicos do Site:
     - Responsividade: O site foi projetado com uma abordagem mobile-first, garantindo uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops. A responsividade foi assegurada usando unidades flexíveis, media queries e a grade responsiva do Bootstrap.
     - Integração de Serviços: Integramos APIs para as notícias, permitindo uma experiência contínua e integrada para os usuários.
 
-##Requisitos Front-End Design
+### Requisitos Front-End Design
 <details>
     <ul>
         <li>Integração completa com React; </li>
@@ -36,7 +36,7 @@ Aspectos Técnicos do Site:
     </ul>
 </details>
 
-##Requisitos Web Development
+### Requisitos Web Development
 <details>
     <ul>
         <li>Projeto criado em React utilizando estrutura de componentes e tratamento de estilização com Bootstrap (20 pontos);</li>
