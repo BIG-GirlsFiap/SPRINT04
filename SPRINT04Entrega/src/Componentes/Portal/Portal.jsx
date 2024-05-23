@@ -97,10 +97,10 @@ function Portal() {
                                 {isConsultaChecked && (
 
 
-                                    <div id="checkbox-consultas" class="checkbox-consultas ">
-                                        <input type="text" id='box-consulta' placeholder="Digite a especiliadade médica" />
+                                    <label class="checkbox-consultas ">
+                                        <input type="text" id='box-consulta' placeholder="Digite a especiliadade médica" className='rows-3'/>
                                         <input type="date" name="Date" id="box-consulta" />
-                                    </div>
+                                    </label>
                                 )}
                                 <div id="avaliation-box">
                                     <p>Como o paciente se sentiu durante na situação?</p>
