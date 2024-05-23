@@ -22,7 +22,7 @@ Link do site hospedado: [Transforma ICr](https://transformaicrfiap.netlify.app/)
 <ul>
     <li>Desenvolvimento com React: O site foi construído usando o framework React, que oferece uma arquitetura de componentes eficiente e uma experiência de usuário interativa.</li>
     <li>Estilização com SASS e Bootstrap: Utilizamos SASS (Syntactically Awesome Stylesheets) para uma gestão mais eficaz e modular dos estilos CSS, permitindo a criação de temas consistentes e reutilizáveis. Bootstrap foi integrado para agilizar o desenvolvimento e garantir uma estética moderna e responsiva.</li>
-    <li> Responsividade: O site foi projetado para garantit uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops. A responsividade foi assegurada usando unidades flexíveis, media queries e a grade responsiva do Bootstrap.</li>
+    <li> Responsividade: O site foi projetado para garantir uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops. A responsividade foi assegurada usando unidades flexíveis, media queries e a grade responsiva do Bootstrap.</li>
     <li>Integração de Serviços: Integramos APIs para as notícias, permitindo uma experiência contínua e integrada para os usuários.</li>
 </ul>
 
