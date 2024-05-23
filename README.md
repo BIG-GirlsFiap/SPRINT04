@@ -16,6 +16,8 @@ Para lidar com esse desafio, propomos melhorias significativas no site do ICR, v
 2. *Avaliação Pós-Exame*: Uma ferramenta para que os pacientes expressem suas emoções e experiências durante o procedimento, fornecendo insights valiosos para melhorar futuros exames.
 3. *Apoio Psicológico*: Disponibilizamos serviços de terapia presencial ou online para pacientes e acompanhantes, visando oferecer suporte emocional antes, durante e após os exames.(pensando em pacientes que requer um tratamento longo, que tem a rotina dentro do hospital).
 
+Link do site hospedado: [Transforma ICr](https://transformaicrfiap.netlify.app/)
+
 Aspectos Técnicos do Site: 
     - Desenvolvimento com React: O site foi construído usando o framework React, que oferece uma arquitetura de componentes eficiente e uma experiência de usuário interativa.
     - Estilização com SASS e Bootstrap: Utilizamos SASS (Syntactically Awesome Stylesheets) para uma gestão mais eficaz e modular dos estilos CSS, permitindo a criação de temas consistentes e reutilizáveis. Bootstrap foi integrado para agilizar o desenvolvimento e garantir uma estética moderna e responsiva.
@@ -35,7 +37,7 @@ Aspectos Técnicos do Site:
 </details>
 
 ##Requisitos Web Development
-<detail>
+<details>
     <ul>
         <li>Projeto criado em React utilizando estrutura de componentes e tratamento de estilização com Bootstrap (20 pontos);</li>
         <li>Projeto em React precisa consumir de uma API utilizando recursos de json(Local), revisão do DOM e criação de eventos nas partes do projeto, estilização com sass (60 pontos);</li>
