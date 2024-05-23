@@ -35,13 +35,13 @@ function HomeContent() {
             <h3 className="">Apoio Psicológico</h3>
             <p>Estamos aqui para ajudar você a cuidar da sua saúde!</p>
             
-            <h5>Benefícios</h5>
+            {/* <h5>Benefícios</h5>
             <ul>
               <li>Aconselhamento Profissional</li>
               <li>Apoio Emocional</li>
               <li>Apoio na adaptação à nova rotina</li>
               <li>Melhoria da Qualidade de vida</li>
-            </ul>
+            </ul> */}
             <img src={Apoio01} alt="" />
             {/* <p >
               O acompanhamento psicológico é muito importante no contexto de doenças, tanto para o paciente quanto para os acompanhantes.
