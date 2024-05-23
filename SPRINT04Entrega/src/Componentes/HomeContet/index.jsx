@@ -1,11 +1,11 @@
-import data from '../../../noticias.json';
+//import data from '../../../noticias.json';
 import infos from '../../../exame.json';
 import Apoio01 from '../images/Apoio01.jpg'
 import Accordion from 'react-bootstrap/Accordion';
 import Carousel from 'react-bootstrap/Carousel';
 import HumanizaLogo from "../SVGs/HumanizaLogo.svg"
 import { useEffect, useState } from "react";
-//import NewsCard from "../NewsCards/NewsCard.jsx";
+
 
 function HomeContent() {
   const [news, setNews] = useState([]);
@@ -111,8 +111,8 @@ return (
         <Carousel className='noticias-main'>
           {news.map((noticia, index) => (
             <Carousel.Item interval={5000} key={index} className='noticias-box'>
-              <h3>{noticia}</h3>
-              <p className='descrition text-muted'>{noticia.descrition}</p>
+              <h3>{noticia.title}</h3>
+              <p className='descrition text-muted'>{noticia.description}</p>
               <div className='noticia-image'>
                 <img src={noticia.image} alt="" />
               </div>
@@ -120,6 +120,9 @@ return (
             </Carousel.Item>
           ))}
         </Carousel>
+      </section>
+      <section>
+
       </section>
     </section>
   </main >
